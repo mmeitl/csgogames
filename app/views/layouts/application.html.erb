@@ -8,6 +8,30 @@
 </head>
 <body>
 
+  <nav>
+    <div class="nav-wrapper cyan darken-3">
+	   <%= link_to root_path  do %>
+	    <i class = "brand-logo center" >CSMvpSkins.com</i>
+	    <% end %>  
+     
+     
+     
+      <ul id="nav-mobile" class="left hide-med-and-down">
+      <li><%= link_to "About us", about_path %> </li>
+      
+      
+      <li><%=link_to "Jackpot", jackpot_path %> </li>
+     
+  
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+       
+      
+      </ul>
+    </div>
+  </nav>
+         
+  
+
 <%= yield %>
 
 </body>
