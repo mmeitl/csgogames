@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   post 'auth/steam/callback' => 'home#auth_callback'
   
   get "jackpot", :to => 'home#jackpot'
+  
+  get "profit", :to => "home#profit"
+  
+  get "donate", :to => "home#donate"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
