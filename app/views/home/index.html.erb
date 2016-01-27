@@ -9,17 +9,7 @@
 
 
 
-<% if session[:user] %>    
-<h3>Current user:</h3>
-<%= image_tag session[:image] %>
-<p><%= session[:nickname] %></p>
-<p><%= session[:uid] %></p>
-<p><a href="/logout">Logout</a></p>
-<% else %>
-<p> <%= link_to image_tag("sits_small.png"), "/auth/steam" %></p>
-
-<% end %>
-              
+    
           
         
         

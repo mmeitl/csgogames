@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'about', :to => 'home#about'
   
-  post 'auth/steam/callback', :to => 'home#auth_callback'
+  match 'auth/:provider/callback', :to => 'sessions#create', via: :all
+  delete '/logout', to: 'sessions#destroy', as: :logout
   
   get "jackpot", :to => 'home#jackpot'
   
