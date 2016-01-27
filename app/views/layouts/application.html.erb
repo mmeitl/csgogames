@@ -15,7 +15,7 @@
 	    <% end %>  
      
      
-     
+     <% if session.key? :user %>
       <ul id="nav-mobile" class="left hide-med-and-down">
       <li><%= link_to "About us", about_path %> </li>
       
@@ -28,6 +28,7 @@
       <li><%= link_to "Profit", profit_path %> </li>
       
       <li><%= link_to "Donate", donate_path %></li>
+      <% end %>
       </ul>
     </div>
   </nav>

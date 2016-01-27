@@ -166,6 +166,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   materialize-sass
+  omniauth
   omniauth-steam
   pg
   rails (= 4.2.4)

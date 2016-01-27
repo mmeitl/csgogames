@@ -3,14 +3,25 @@
          <h5 class="orange-text text-accent-4">Sign in to continue</h5> 
 
 
+  
 
 
 
 
 
+<% if session[:user] %>    
+<h3>Current user:</h3>
+<%= image_tag session[:image] %>
+<p><%= session[:nickname] %></p>
+<p><%= session[:uid] %></p>
+<p><a href="/logout">Logout</a></p>
+<% else %>
+<p> <%= link_to image_tag("sits_small.png"), "/auth/steam" %></p>
+
+<% end %>
               
           
-        <p> <%= link_to image_tag("sits_small.png"), "/auth/steam" %></p>
+        
         
         
 
@@ -19,9 +30,3 @@
       </div>
     </body>
     
-<% if session.key? :current_user %>    
-<h3>Current user:</h3>
-<%= image_tag session[:current_user][:image] %>
-<p><%= session[:current_user][:nickname] %></p>
-<p><%= session[:current_user][:uid] %></p>
-<% end %>
