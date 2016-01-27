@@ -11,22 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122011218) do
+ActiveRecord::Schema.define(version: 20160127201614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "authorizations", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "uid"
     t.string   "nickname"
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "avatar_url"
+    t.string   "profile_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  add_index "users", ["uid"], name: "index_users_on_uid", unique: true, using: :btree
 
 end
