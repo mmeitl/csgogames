@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :nickname
       t.string :avatar_url
       t.string :profile_url
-      
 
       t.timestamps null: false
     end

@@ -1,0 +1,1 @@
+[{"severity":"convention","location":{"begin_pos":1305,"end_pos":1308},"message":"Line is too long. [83/80]","cop_name":"Metrics/LineLength","status":"unsupported"},{"severity":"convention","location":{"begin_pos":1543,"end_pos":1593},"message":"Line is too long. [130/80]","cop_name":"Metrics/LineLength","status":"unsupported"}]

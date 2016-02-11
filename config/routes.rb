@@ -1,20 +1,21 @@
 Rails.application.routes.draw do
-  
   resources :games
   root 'home#index'
   get 'home/index'
-  get 'about', :to => 'home#about'
-  
-  match 'auth/:provider/callback', :to => 'sessions#create', via: :all
+  get 'about', to: 'home#about'
+
+  match 'auth/:provider/callback', to: 'sessions#create', via: :all
   delete '/logout', to: 'sessions#destroy', as: :logout
-  
-  get "jackpot", :to => 'home#jackpot'
-  
-  get "profit", :to => "home#profit"
-  
-  get "donate", :to => "home#donate"
-  
-  get 'logout', :to =>"home#logout"
+
+  get 'jackpot', to: 'home#jackpot'
+
+  get 'profit', to: 'home#profit'
+
+  get 'donate', to: 'home#donate'
+
+  get 'logout', to: 'home#logout'
+
+  get 'profile', to: 'home#profile'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
