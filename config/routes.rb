@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :games
   root 'home#index'
   get 'home/index'
   get 'about', :to => 'home#about'
